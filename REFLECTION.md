@@ -9,3 +9,4 @@ Answer each question in 1–3 sentences, in your own words.
 3. What does a fragment <>...</> do, and why not just use a <div>?
 
 4. Name one benefit of splitting the UI into small components.
+
