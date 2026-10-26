@@ -17,6 +17,7 @@ function validate(values) {
 }
 
 function CheckoutForm({ onPlaceOrder }) {
+      // State for the input values and the error messages
   const [values, setValues] = useState({ name: '', mahallah: '', pickupTime: '' })
   const [errors, setErrors] = useState({})
 
@@ -38,10 +39,12 @@ function CheckoutForm({ onPlaceOrder }) {
     <form className="card form" onSubmit={handleSubmit} noValidate>
       <h3>Checkout</h3>
 
+      {/* Name Input */}
       <label htmlFor="name">Name</label>
       <input id="name" name="name" value={values.name} onChange={handleChange} />
       {errors.name && <p className="field-error">{errors.name}</p>}
 
+       {/* Mahallah Select */}
       <label htmlFor="mahallah">Mahallah</label>
       <select id="mahallah" name="mahallah" value={values.mahallah} onChange={handleChange}>
         <option value="">Select...</option>
@@ -51,6 +54,7 @@ function CheckoutForm({ onPlaceOrder }) {
       </select>
       {errors.mahallah && <p className="field-error">{errors.mahallah}</p>}
 
+        {/* Pickup Time Input */}
       <label htmlFor="pickupTime">Pickup time</label>
       <input
         id="pickupTime"

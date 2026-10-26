@@ -7,19 +7,19 @@ import CartPage from './components/CartPage.jsx'
 import { Loading, ErrorMessage } from './components/Status.jsx'
 
 function App() {
-  // --- fetched data state ---
+  //fetched data state 
   const [vendors, setVendors] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [reloadKey, setReloadKey] = useState(0)
 
-  // --- UI state ---
+  // UI state
   const [selectedVendorId, setSelectedVendorId] = useState(null)
   const [cart, setCart] = useState([]) // lines of { item, qty }
   const [view, setView] = useState('menu') // 'menu' | 'cart' | 'done'
   const [lastOrder, setLastOrder] = useState(null)
 
-  // --- fetch effect ---
+  //fetch effect
   useEffect(() => {
     const controller = new AbortController()
     setLoading(true)
@@ -45,7 +45,7 @@ function App() {
     return () => controller.abort()
   }, [reloadKey])
 
-  // --- cart handlers (immutable updates!) ---
+  //cart handlers
   function handleAddToCart(item) {
     setCart((prev) => {
       const existing = prev.find((line) => line.item.id === item.id)
@@ -80,11 +80,11 @@ function App() {
     setView('done')
   }
 
-  // --- derived values ---
+  //derived values
   const cartCount = cart.reduce((sum, line) => sum + line.qty, 0)
   const selectedVendor = vendors.find((v) => v.id === selectedVendorId)
 
-  // --- view switch ---
+  //view switch
   let content
   if (loading) {
     content = <Loading />

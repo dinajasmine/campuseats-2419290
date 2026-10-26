@@ -1,5 +1,7 @@
 function CartItem({ line, onChangeQty, onRemove }) {
-  const { item, qty } = line
+  
+    // Structure the line object into the food item and the quantity
+    const { item, qty } = line
   return (
     <li className="cart-line">
       <div>
@@ -11,6 +13,8 @@ function CartItem({ line, onChangeQty, onRemove }) {
         <span>{qty}</span>
         <button type="button" onClick={() => onChangeQty(item.id, +1)}>+</button>
       </div>
+
+      {/* Calculate the subtotal: price x quantity */}
       <p className="line-total">RM {(item.price * qty).toFixed(2)}</p>
       <button type="button" className="link danger" onClick={() => onRemove(item.id)}>
         Remove

@@ -5,7 +5,11 @@ function MenuItemCard({ item, onAdd}) {
         <p className="tag">{item.category}</p>
         <h3>{item.name}</h3>
         <p className="muted">{item.description}</p>
+
+        {/*ensures the price always has 2 decimal places*/}
         <p className="price">RM {item.price.toFixed(2)}</p>
+        
+        {/* Button text changes based on availability. Disabled if not available. */}
         <button 
         className="btn" 
         disabled={!item.available} 

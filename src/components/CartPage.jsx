@@ -2,11 +2,11 @@ import CartItem from './CartItem.jsx'
 import CheckoutForm from './CheckoutForm.jsx'
 
 function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
-  if (cart.length === 0) {
+  // If the cart is empty, don't show the layout at all, just a message.
+    if (cart.length === 0) {
     return <p className="muted">Your cart is empty. Pick something from a menu first.</p>
   }
 
-  // DERIVED — computed every render, never stored in state
   const total = cart.reduce((sum, line) => sum + line.item.price * line.qty, 0)
 
   return (
