@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2215678-kopi-dahlia",
+    "name": "Kopi Dahlia",
+    "location": "Mahallah Asma, Block C",
+    "openHours": "8:00 am - 11:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "2215678-1", "name": "Nasi Lemak Ayam", "description": "Coconut rice, fried chicken, sambal, egg and peanuts", "price": 7.5, "category": "Rice", "available": true },
+      { "id": "2215678-2", "name": "Nasi Ayam Penyet", "description": "Smashed fried chicken with sambal and rice", "price": 9.0, "category": "Rice", "available": true },
+      { "id": "2215678-3", "name": "Laksa Johor", "description": "Spaghetti in spicy fish gravy with herbs", "price": 8.0, "category": "Noodles", "available": true },
+      { "id": "2215678-4", "name": "Mee Goreng Mamak", "description": "Stir-fried noodles with egg and tofu", "price": 6.5, "category": "Noodles", "available": true },
+      { "id": "2215678-5", "name": "Teh Tarik", "description": "Pulled milk tea", "price": 2.5, "category": "Drinks", "available": true },
+      { "id": "2215678-6", "name": "Air Bandung", "description": "Rose syrup with milk", "price": 3.0, "category": "Drinks", "available": true },
+      { "id": "2215678-7", "name": "Roti Canai", "description": "Flaky flatbread with dhal", "price": 2.0, "category": "Snacks", "available": true },
+      { "id": "2215678-8", "name": "Kuih Lapis", "description": "Steamed layered cake (sold out today)", "price": 1.5, "category": "Snacks", "available": false }
+    ]
+  },
+  {
+    "id": "2215678-kafe-aminah",
+    "name": "Kafe Mahallah Aminah",
+    "location": "Mahallah Aminah, Ground Floor",
+    "openHours": "8:00 am - 9:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "2215678-a1", "name": "Nasi Ayam Penyet", "description": "Smashed fried chicken with sambal and rice", "price": 9.0, "category": "Rice", "available": true },
+      { "id": "2215678-a2", "name": "Laksa Johor", "description": "Spaghetti in spicy fish gravy with herbs", "price": 8.0, "category": "Noodles", "available": true },
+      { "id": "2215678-a3", "name": "Air Bandung", "description": "Rose syrup with milk", "price": 3.0, "category": "Drinks", "available": true }
+    ]
+  },
+  {
+    "id": "2215678-kafe-faruq",
+    "name": "Kafe Mahallah Faruq",
+    "location": "Mahallah Faruq, Block B",
+    "openHours": "6:00 pm - 1:00 am",
+    "isOpen": false,
+    "menu": [
+      { "id": "2215678-f1", "name": "Mee Goreng Mamak", "description": "Stir-fried noodles with egg and tofu", "price": 6.5, "category": "Noodles", "available": true },
+      { "id": "2215678-f2", "name": "Teh Tarik", "description": "Pulled milk tea", "price": 2.5, "category": "Drinks", "available": true }
+    ]
+  }
+]
