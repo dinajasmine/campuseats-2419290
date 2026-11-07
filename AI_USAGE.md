@@ -16,3 +16,9 @@
 - What I asked for: Guidance on how to implement my personal feature (search menu by name)
 - What I kept, changed or rejected, and why: AI gave me the search box code. I kept the idea of calculating the filtered items directly in the render (derived list) instead of storing the filtered list in a new `useState`
 - One thing the AI got wrong and how I fixed it: AI's suggests to delete my `items.length === 0` check which handles empty menus. I fixed it by keeping my original empty state check and add a second check for when the search query returns 0 results.
+
+## Week 4
+- Tool(s): Claude
+- What I asked for: Help with the Week 4 code and why my page went blank when I used the search bar.
+- What I kept, changed or rejected, and why: I kept the fix for the blank page and the search filter because they worked when I tested them. I changed the comments into my own simple words so I can explain the code.
+- One thing the AI got wrong and how I fixed it: The search bar made the page blank. The console said "setQuery is not defined" and then "visibleItems is not defined". I fixed it by passing handleSearch to SearchBar and adding the visibleItems filter in VendorPage.
