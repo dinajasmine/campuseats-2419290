@@ -16,11 +16,13 @@ function validate(values) {
   return errors
 }
 
+// onPlaceOrder = a function from the parent, called when the form is valid
 function CheckoutForm({ onPlaceOrder }) {
       // State for the input values and the error messages
   const [values, setValues] = useState({ name: '', mahallah: '', pickupTime: '' })
   const [errors, setErrors] = useState({})
 
+  // One handler for all inputs. The input's "name" attribute matches a key in values.
   function handleChange(event) {
     const { name, value } = event.target
     setValues((prev) => ({ ...prev, [name]: value }))
@@ -30,12 +32,14 @@ function CheckoutForm({ onPlaceOrder }) {
     event.preventDefault() // stop page reload
     const found = validate(values)
     setErrors(found)
+    // if there are no errors at all, send the order
     if (Object.keys(found).length === 0) {
       onPlaceOrder(values)
     }
   }
 
   return (
+    // noValidate = use our own validation instead of the browser's
     <form className="card form" onSubmit={handleSubmit} noValidate>
       <h3>Checkout</h3>
 

@@ -1,3 +1,5 @@
+// One row in the cart. Only shows data and tells the parent when the user clicks
+// It has no state of its own
 function CartItem({ line, onChangeQty, onRemove }) {
   
     // Structure the line object into the food item and the quantity
@@ -8,7 +10,7 @@ function CartItem({ line, onChangeQty, onRemove }) {
         <p className="cart-name">{item.name}</p>
         <p className="muted">RM {item.price.toFixed(2)} each</p>
       </div>
-      <div className="qty">
+      <div className="qty"> {/* -1 to decrease, +1 to increase. If qty reaches 0 the row disappears (handled in CartProvider) */}
         <button type="button" onClick={() => onChangeQty(item.id, -1)}>−</button>
         <span>{qty}</span>
         <button type="button" onClick={() => onChangeQty(item.id, +1)}>+</button>
